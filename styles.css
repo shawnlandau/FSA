@@ -32,7 +32,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 /* Typography */
@@ -43,14 +43,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-color);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
+h1 { font-size: 2rem; margin-bottom: 0.75rem; }
+h2 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+h4 { font-size: 1rem; margin-bottom: 0.25rem; }
 
-p {
-    margin-bottom: 1rem;
-    color: var(--text-color);
+p, .about-card p, .facility-item p, .program-card p, .testimonial-content p, .coach-bio, .stat-label {
+    font-size: 0.98rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Buttons */
@@ -58,15 +58,15 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 16px 32px;
-    border-radius: 12px;
+    padding: 12px 18px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     text-align: center;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.98rem;
     position: relative;
     overflow: hidden;
 }
@@ -127,7 +127,7 @@ p {
     background: var(--white);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
     border-bottom: 1px solid var(--border-color);
 }
@@ -146,10 +146,23 @@ p {
     align-items: center;
 }
 
-.logo-img {
-    height: 45px;
-    width: auto;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+.logo-img, .hero-logo-img {
+    display: block;
+    max-width: 120px;
+    min-width: 80px;
+    height: auto;
+    margin: 0 auto;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.hero-logo-img {
+    max-width: 140px;
+    margin-bottom: 1rem;
 }
 
 .nav-menu {
@@ -209,7 +222,7 @@ p {
 
 /* Hero Section */
 .hero {
-    padding: 8rem 0 6rem;
+    padding: 4rem 0 2.5rem;
     background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%);
     position: relative;
     overflow: hidden;
@@ -258,11 +271,11 @@ p {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: var(--text-color);
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-title .highlight {
@@ -273,21 +286,21 @@ p {
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--text-light);
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .hero-cta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .hero-highlights {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .highlight-item {
@@ -347,12 +360,12 @@ p {
     bottom: -20px;
     right: -20px;
     background: var(--white);
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: 0.5rem;
+    border-radius: 10px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     border: 1px solid var(--border-color);
     display: flex;
-    gap: 1.5rem;
+    gap: 0.5rem;
 }
 
 .stat-item {
@@ -360,14 +373,14 @@ p {
 }
 
 .stat-item .stat-number {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 800;
     color: var(--primary-color);
     display: block;
 }
 
 .stat-item .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--text-light);
     font-weight: 600;
     text-transform: uppercase;
@@ -427,8 +440,8 @@ p {
 }
 
 /* Section Styles */
-section {
-    padding: 80px 0;
+section, .about-section, .programs, .coaches, .testimonials, .gallery, .contact, .lead-capture, .footer {
+    padding: 2.5rem 0;
 }
 
 .section-header {
@@ -469,8 +482,8 @@ section {
 
 .about-card {
     background: var(--white);
-    padding: 2rem;
-    border-radius: 16px;
+    padding: 1rem;
+    border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
@@ -1040,25 +1053,25 @@ section {
 .footer {
     background: var(--dark-gray);
     color: var(--white);
-    padding: 3rem 0 1rem;
+    padding: 1.5rem 0 0.5rem;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .footer-section h3,
 .footer-section h4 {
     color: var(--white);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.footer-section p {
-    color: #d1d5db;
-    margin-bottom: 1rem;
+.footer-section p, .footer-section ul li {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
 }
 
 .footer-section ul {
@@ -1255,9 +1268,17 @@ section {
         font-size: 1.2rem;
     }
 
+    .logo-img, .hero-logo-img {
+        max-width: 90px;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
     .hero-logo-img {
-        max-width: 220px;
-        padding: 1rem 0;
+        max-width: 140px;
+        margin-bottom: 1rem;
+    }
+    .navbar {
+        padding: 0.5rem 0;
     }
 }
 
@@ -1282,6 +1303,16 @@ section {
     .coach-spotlight {
         padding: 1.5rem;
     }
+
+    .logo-img, .hero-logo-img {
+        max-width: 70px;
+    }
+    .hero-logo-img {
+        max-width: 100px;
+    }
+    .navbar {
+        padding: 0.25rem 0;
+    }
 }
 
 .fsa-highlight {
@@ -1300,20 +1331,34 @@ section {
 
 .hero-title-sub {
     display: block;
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-color);
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
-.hero-logo-img {
-    display: block;
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    background: none;
-    box-shadow: 0 8px 30px rgba(30,64,175,0.10);
-    border-radius: 20px;
-    padding: 1.5rem 0;
+@media (min-width: 769px) {
+    section, .about-section, .programs, .coaches, .testimonials, .gallery, .contact, .lead-capture, .footer {
+        padding: 4.5rem 0;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    .main-image, .hero-logo-img {
+        max-width: 220px;
+    }
+}
+
+.about-content, .facility-grid, .programs-grid, .coaches-grid, .testimonials-grid, .gallery-grid, .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+}
+
+.about-card, .facility-item, .program-card, .testimonial-card, .coach-card, .stat-card {
+    padding: 1rem !important;
+    border-radius: 8px !important;
 } 
