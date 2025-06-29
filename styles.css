@@ -1246,6 +1246,19 @@ section {
     .social-links {
         justify-content: center;
     }
+
+    .fsa-highlight {
+        font-size: 2rem;
+    }
+
+    .hero-title-sub {
+        font-size: 1.2rem;
+    }
+
+    .hero-logo-img {
+        max-width: 220px;
+        padding: 1rem 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1269,4 +1282,38 @@ section {
     .coach-spotlight {
         padding: 1.5rem;
     }
+}
+
+.fsa-highlight {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: 1.5px;
+    text-shadow: 0 4px 24px rgba(30,64,175,0.10), 0 1px 0 #fff;
+    margin-bottom: 0.5rem;
+}
+
+.hero-title-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.hero-logo-img {
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: none;
+    box-shadow: 0 8px 30px rgba(30,64,175,0.10);
+    border-radius: 20px;
+    padding: 1.5rem 0;
 } 
